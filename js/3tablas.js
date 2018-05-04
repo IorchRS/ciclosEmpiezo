@@ -1,5 +1,11 @@
 
+$(window).load(function(){
+alert('funciono');
+//    $('ul.tabs li a:first').addClass('active');
+//$('.secciones #id').hide();
+//$('.secciones #id:first').show();
 
+});
         function mifuncion(){
 var i;                      
 var texto =
@@ -128,7 +134,7 @@ texto+='</div>\
                     }     
              
                     function mifuncion3(){
-                        var i=0;                      
+                        var i;                      
                         var base='\
                        <h1>Nombres</h1>\
                         <div class="row">\
@@ -162,27 +168,41 @@ texto+='</div>\
                 <div class="col-md-1">32</div>\
               </div>\
                       '
-            
                         ;
-                        var titulo=['Alumno','Nombre','Apellido','edad'];
-                        var nombres=['Ramses','Jhonatan','Liz','Jorge'];
+                        var titulo=["Alumno","Nombre","Apellido","edad"];
+                        var nombres=["Ramses","Jhonatan","Liz","Jorge"];
                         var Apellido=['playa','serio','facilito','albures'];
                         var edad=['30','22','36','32'];
                         var tabla="";
+                        var j;
 
-                        tabla = '<h1>Nombres</h1>';
-                        for (i = 0; i < 4; i++) 
-                        tabla+='<div class="row">\
-                        <div class="col-md-1">'+titulo[i]+    
-                        '</div>';
-                        tabla+='<div class="row">\
-                        <div class="col-md-1">'+nombres[i]+    
-                        '</div>';
-                        tabla+='<div class="row">\
-                        <div class="col-md-1">'+nombres[i]+    
-                        '</div>';
                         
-                                        
-                            document.getElementById("palabra").innerHTML = base;                
+                    
+                        
+                        for (i = 0; i < 4; i++){ 
+                            tabla += '<div class=row>';
+                        tabla+='<div class="col-md-1">'+titulo[i];
+                        tabla+='</div>';
+                        tabla+='<div class="col-md-1">'+[i];
+                        tabla+='</div>';
+                        tabla+='<div class="col-md-1">'+nombres[i];
+                        tabla+='</div>';
+                        tabla+='<div class="col-md-1">'+Apellido[i];
+                        tabla+='</div>';
+                        tabla+='<div class="col-md-1">'+edad[i];
+                        tabla+='</div>';
+                        tabla+='</div>';
+                    }
+                       
+                       /* tabla+='<div class="row">\
+                        <div class="col-md-1">'+nombres[i]+    
+                        '</div>';
+                        tabla+='<div class="row">\
+                        <div class="col-md-1">'+Apellido[i]+    
+                        '</div>';
+                        tabla+='<div class="row">\
+                        <div class="col-md-1">'+edad[i]+    
+                        '</div>';*/    
+                            document.getElementById("palabra").innerHTML = tabla;                
                                 }     
                          
